@@ -376,10 +376,13 @@
             @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 html body * {
+    margin: 0;
+    padding: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', Arial, sans-serif;
 }
 .gridywrap div[class*=gridy] {
+    display : grid;
   background: #eee;
   box-shadow: inset 0 0 0 1px #ddd;
   padding: 15px; float: left;
@@ -547,6 +550,42 @@ h1 {
 .intro p a {
   color: #FA8CD3;
 }
-        </style>
+/* ===== MOBILE IMPROVEMENT ===== */
+@media screen and (max-width: 639px) {
+
+.gridywrap {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 kolom */
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.gridywrap div[class*=gridy] {
+  float: none;
+  width: 100% !important;
+  height: 280px !important;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gridywrap .gridinfo h3 {
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+.gridywrap .gridinfo p.gridexerpt {
+  width: 80%;
+  font-size: 14px;
+}
+
+.gridywrap .gridinfo .grid-btn {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+}
+  </style>
     </body>
     </html>
